@@ -1,27 +1,34 @@
 # git-init
-[![NPM version][npm-image]][npm-url]
-[![Downloads][downloads-image]][downloads-url]
-[![js-standard-style][standard-image]][standard-url]
+<small>This is fork from [`git-init`](https://github.com/yoshuawuyts/git-init) package</small>
 
 Initialize a new git repository.
 
 ## Installation
 ```bash
-$ npm install git-init
+$ npm install @mkikets/git-init
 ```
 
 ## Usage
+### Callback
 ```js
-const init = require('git-init')
+const init = require('@mkikets/git-init')
 
 init('./', (err) => {
   if (err) throw err
 })
 ```
+### Promises
+```js
+const init = require('@mkikets/git-init').promise
 
-## API
-### init([path], cb(err))
-Create a new git repository at `path`.
+init('./')
+  .then(()=>{
+    console.log("initialized")
+  })
+  .catch((err) => {
+    console.error(err);
+  })
+```
 
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
