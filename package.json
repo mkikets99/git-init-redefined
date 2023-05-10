@@ -1,13 +1,12 @@
 {
-  "name": "git-init",
+  "name": "@mkikets/git-init",
   "version": "1.0.0",
   "description": "git-init",
   "main": "index.js",
   "scripts": {
-    "test": "standard && NODE_ENV=test node test",
-    "test-cov": "standard && NODE_ENV=test istanbul cover test.js"
+    "test": "mocha tests"
   },
-  "repository": "yoshuawuyts/git-init",
+  "repository": "mkikets99/git-init-redefined",
   "keywords": [
     "git",
     "create",
@@ -16,6 +15,7 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "mocha": "^10.2.0"
   },
   "files": [
     "LICENSE",
